@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">	
+
+<head>
+	<meta charset="UTF-8">
+	<title>Crystals Collector</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+
+</head>
+
+<body>
+
+	<header>
+		<h1>Crystals Collector!</h1>
+	</header>
+	<br>
+
+<section class="instructions">
+<br><br>
+<p>You will be given a random number at the start of the game.</p>
+
+<br><br>
+
+<p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+
+<br><br>
+
+<p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+
+<br><br>
+
+<p>The value of each crystal is hidden from you until you click on it.</p>
+
+<br><br>
+
+<p>Each time when the game starts, the game will change the values of each crystal.</p>
+
+<br><br><br>
+
+
+</section>
+
+<br>
+
+<div class="numbersection">
+
+<div id="randomNumber">
+
+
+</div>
+
+<div id="winsAndLosses">
+<br><br>
+<p>Wins: </p>
+<br><br>
+<p>Losses: </p>
+<br><br>
+
+</div>
+
+</div>
+
+<br><br>
+
+<div class="crystals">
+
+<img id="crystal1" src="assets/images/bluegem.jpeg">
+<img id="crystal1" src="assets/images/clearcrystal.jpeg">
+<img id="crystal3" src="assets/images/emerald.jpg">
+<img id="crystal4" src="assets/images/redruby.png">
+
+</div>
+
+<br>
+
+<div id="totalscore">
+
+<p>Your total score is: </p>
+
+</div>
+
+<br>
+
+<div id="scorecounter">
+
+
+
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery.js"></script>
+
+ <script type="text/javascript">
+
+$(document).ready(function() {
+
+//GLOBAL VARIALBLES
+//=====================================================================
+var wins = 0;
+var losses = 0;
+var totalScore = 0;
+var scoreCounter = 0;
+
+//=====================================================================
+
+//Now we create a function to set the Random Number selected -->this needs to display in #randomnumber
+
+function getRandomNumber(min, max) {
+   return Math.random() * (max - min) + min;
+}
+
+var randomNumber = getRandomNumber(19,120);
+console.log(randomNumber);
+
+
+//We also need to create a for loop that assigns values between 1-12 for each crystal image  (values remain hidden)
+
+var numberOptions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+ // for (var i = 0; i < numberOptions.length; i++) {
+
+ 
+
+
+
+
+//FUNCTIONS
+//=====================================================================
+//We need to set up so that when each crystal is clicked, its value is added to the totalScore counter
+//We need to set up if/else statements that demonstrate when totalScore=RandomNumber, the wins counter increases by 1 and game resets
+	//Game resets means: totalScore and scoreCounter goes back to 0, a new RandomNumber is selected, and the crystals are given new values
+//else if totalScore>RandomNumber, the loss counter increases and game resets (see above)
+
+
+
+
+
+});
+
+</script>
+
+</body>
+
+</html>
+
+
+
